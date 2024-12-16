@@ -2,7 +2,6 @@ const Json= require("json-server");
 const server= Json.create();
 const route= Json.router("database.json");
 const mid= Json.defaults();
-const port= process.env.PORT || 3000;
 const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
