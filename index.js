@@ -1,29 +1,26 @@
-const Json= require("json-server");
-const server= Json.create();
-const route= Json.router("database.json");
-const mid= Json.defaults();
+const JsonServer = require('json-server');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
-server.use(mid);
-server.use(route);
+// Configuración de JSON Server
+const server = JsonServer.create();
+const router = JsonServer.router('database.json'); // Archivo JSON de datos
+const middlewares = JsonServer.defaults();
 
-server.listen(port);
+// Middleware de JSON Server
+server.use(middlewares);
+server.use(bodyParser.json());
+server.use(cors());
 
-// Configura el servidor
+// Configuración del puerto
 const PORT = process.env.PORT || 3000;
 
-// Middlewares
-app.use(bodyParser.json());
-app.use(cors());
-
-// Endpoint para recuperación de contraseña
-app.post('/password-reset', async (req, res) => {
+// Endpoint personalizado para recuperación de contraseña
+server.post('/password-reset', async (req, res) => {
   const { email } = req.body;
   console.log('Solicitud de recuperación recibida para:', email);
 
-  // Validación opcional: restringir a un dominio específico
   if (!email || !email.includes('@')) {
     return res.status(400).send('Correo inválido.');
   }
@@ -62,7 +59,10 @@ app.post('/password-reset', async (req, res) => {
   }
 });
 
+// Rutas de JSON Server
+server.use(router);
+
 // Inicia el servidor
-app.listen(PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}`);
+server.listen(PORT, () => {
+  console.log(`Servidor corriendo en el puerto ${PORT}`);
 });
