@@ -2,7 +2,6 @@ const Json= require("json-server");
 const server= Json.create();
 const route= Json.router("database.json");
 const mid= Json.defaults();
-const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -13,7 +12,6 @@ server.use(route);
 server.listen(port);
 
 // Configura el servidor
-const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middlewares
@@ -36,7 +34,7 @@ app.post('/password-reset', async (req, res) => {
       service: 'gmail', // Usando Gmail
       auth: {
         user: 'tu_correo@gmail.com', // Tu correo emisor
-        pass: 'contraseña_de_aplicación', // Contraseña de aplicación
+        pass: 'bwrx crpq wtvm wmdd', // Contraseña de aplicación
       },
     });
 
