@@ -1,0 +1,80 @@
+{
+  "student": [
+    {
+      "id": "1",
+      "rut": "214356781",
+      "name": "Admin",
+      "last": "test",
+      "email": "admin.test@app.com",
+      "email2": "",
+      "phone": "",
+      "pass": "tester01",
+      "isactive": true
+    },
+    {
+      "id": "45e6",
+      "rut": "123456789",
+      "name": "asdsadfsadf",
+      "last": "asdfasdf",
+      "email": "test@betas.cl",
+      "email2": "",
+      "phone": "",
+      "pass": "testerr02",
+      "isactive": false
+    },
+    {
+      "id": "757e",
+      "rut": "123495646",
+      "name": "asdsaa",
+      "last": "sdasd",
+      "email": "test3.d@app.com",
+      "pass": "tester03",
+      "isactive": false
+    }
+  ],
+  "teacher": [
+    {
+      "id": "68f0",
+      "name": "Diego",
+      "last": "Prueba",
+      "rut": "987654321",
+      "email": "diego@duoc.com",
+      "pass": "admin123",
+      "phone": "3324213",
+      "special": "Ingles",
+      "subject": ""
+    }
+  ],
+  "qrdata": [
+    {
+      "id": "83d6",
+      "subject": "Matemáticas",
+      "date": "2024-10-21",
+      "teacher": "Prof. López",
+      "rut": "214356781",
+      "email": "admin.test@app.com"
+    },
+    {
+      "id": "d791",
+      "subject": "Biología",
+      "date": "2024-10-22",
+      "teacher": "Prof. Ramírez",
+      "rut": "214356781",
+      "email": "admin.test@app.com"
+    }
+  ],
+  "justi": [
+    {
+      "id": "ds23",
+      "student": "Prueba",
+      "subject": "Matemáticas",
+      "teacher": "Prof. López",
+      "date": "2024-10-21",
+      "description": "Alo"
+    }
+  ],
+  "password-reset":[
+    
+  ]
+  
+}
