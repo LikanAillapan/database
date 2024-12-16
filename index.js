@@ -37,7 +37,7 @@ server.post('/password-reset', async (req, res) => {
 
     // Configuración del correo
     const mailOptions = {
-      from: 'tu_correo@gmail.com',
+      from: 'armandocubillos6@gmail.com',
       to: email, // Dirección del destinatario
       subject: 'Recuperación de Contraseña',
       html: `
