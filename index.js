@@ -30,7 +30,7 @@ server.post('/password-reset', async (req, res) => {
     const transporter = nodemailer.createTransport({
       service: 'gmail', // Usando Gmail
       auth: {
-        user: 'tu_correo@gmail.com', // Tu correo emisor
+        user: 'armandocubillos6@gmail.com', // Tu correo emisor
         pass: 'bwrx crpq wtvm wmdd', // Contraseña de aplicación
       },
     });
