@@ -22,40 +22,38 @@ server.post('/password-reset', async (req, res) => {
   console.log('Solicitud de recuperación recibida para:', email);
 
   if (!email || !email.includes('@')) {
-    return res.status(400).send('Correo inválido.');
+    return res.status(400).json({ message: 'Correo inválido.' });
   }
 
   try {
-    // Configuración del transporte de Nodemailer
     const transporter = nodemailer.createTransport({
-      service: 'gmail', // Usando Gmail
+      service: 'gmail',
       auth: {
-        user: 'armandocubillos6@gmail.com', // Tu correo emisor
-        pass: 'bwrx crpq wtvm wmdd', // Contraseña de aplicación
+        user: 'tu_correo@gmail.com',
+        pass: 'contraseña_de_aplicación',
       },
     });
 
-    // Configuración del correo
     const mailOptions = {
-      from: 'armandocubillos6@gmail.com',
-      to: email, // Dirección del destinatario
+      from: 'tu_correo@gmail.com',
+      to: email,
       subject: 'Recuperación de Contraseña',
       html: `
         <p>Hola,</p>
         <p>Haz clic en el siguiente enlace para restablecer tu contraseña:</p>
         <a href="https://mi-frontend.com/reset-password?token=12345">Restablecer Contraseña</a>
-        <p>Si no solicitaste este correo, ignóralo.</p>
       `,
     };
 
     console.log('Enviando correo...');
     const info = await transporter.sendMail(mailOptions);
-    console.log('Correo enviado:', info.response);
+    console.log('Correo enviado correctamente:', info.response);
 
-    res.status(200).send('Correo enviado correctamente.');
+    // Respuesta JSON válida
+    res.status(200).json({ message: 'Correo enviado correctamente.', success: true });
   } catch (error) {
     console.error('Error al enviar el correo:', error.message);
-    res.status(500).send('Error al enviar el correo.');
+    res.status(500).json({ message: 'Error al enviar el correo.', error: error.message });
   }
 });
 
