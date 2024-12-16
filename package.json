@@ -22,7 +22,7 @@
     "cors": "^2.8.5",
     "json-server": "^0.17.4",
     "node": "^23.4.0"
-  }
+  },
 {
   "name": "password-reset-backend",
   "version": "1.0.0",
