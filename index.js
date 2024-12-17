@@ -41,7 +41,7 @@ server.post('/password-reset', async (req, res) => {
       html: `
         <p>Hola,</p>
         <p>Haz clic en el siguiente enlace para restablecer tu contraseña:</p>
-        <a href="https://mi-frontend.com/reset-password?token=12345">Restablecer Contraseña</a>
+        <a href="http://localhost:8100/reset-password?token=TOKEN_GENERADO">Restablecer Contraseña</a>
       `,
     };
 
