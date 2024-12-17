@@ -29,13 +29,13 @@ server.post('/password-reset', async (req, res) => {
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: 'tu_correo@gmail.com',
-        pass: 'contraseña_de_aplicación',
+        user: 'armandocubillos6@gmail.com', // Tu correo emisor
+        pass: 'bwrx crpq wtvm wmdd',
       },
     });
 
     const mailOptions = {
-      from: 'tu_correo@gmail.com',
+      from: 'armandocubillos6@gmail.com',
       to: email,
       subject: 'Recuperación de Contraseña',
       html: `
