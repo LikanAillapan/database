@@ -73,8 +73,11 @@
       "description": "Alo"
     }
   ],
-  "password-reset":[
-    
-  ]
+"password-reset": [
+  {
+    "email": "test@betas.cl",
+    "token": "12345abcd67890efgh"
+  }
+]
   
 }
