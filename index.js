@@ -16,6 +16,12 @@ server.use(cors());
 // Configuración del puerto
 const PORT = process.env.PORT || 3000;
 
+const corsOptions = {
+  origin: ['http://localhost:8100', 'https://database-8tvq.onrender.com/'],
+  optionsSuccessStatus: 200,
+};
+
+
 // Endpoint personalizado para recuperación de contraseña
 server.post('/password-reset', async (req, res) => {
   const { email } = req.body;
